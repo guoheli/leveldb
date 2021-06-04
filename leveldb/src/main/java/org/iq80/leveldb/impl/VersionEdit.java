@@ -159,7 +159,7 @@ public class VersionEdit
 
     public Slice encode()
     {
-        DynamicSliceOutput dynamicSliceOutput = new DynamicSliceOutput(4096);
+        DynamicSliceOutput dynamicSliceOutput = new DynamicSliceOutput(4096); // 4M
         for (VersionEditTag versionEditTag : VersionEditTag.values()) {
             versionEditTag.writeValue(dynamicSliceOutput, this);
         }
